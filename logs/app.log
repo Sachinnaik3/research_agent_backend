@@ -988,3 +988,46 @@ During task with name 'research' and id '5a6e611e-5e6f-2bd9-5a5f-288b43dc7ab9'
 2026-05-02 20:54:54.429 | INFO     | __main__:deside_image:289 - {'event': 'image_plan_start'}
 2026-05-02 20:55:32.126 | SUCCESS  | __main__:deside_image:309 - {'event': 'image_plan_success'}
 2026-05-02 20:56:06.913 | SUCCESS  | __main__:<module>:433 - {'event': 'execution_success'}
+2026-05-02 22:19:09.427 | SUCCESS  | app.services.llm.ai_manager:<module>:23 - LLM initialized
+2026-05-02 22:19:09.959 | SUCCESS  | app.services.llm.ai_manager:<module>:35 - Image client initialized
+2026-05-02 22:19:28.067 | INFO     | main:root:12 - Root endpoint accessed
+2026-05-02 22:20:38.594 | INFO     | app.api.routers.research_agent:research:20 - Received research request for topic: AI in new age warfare
+2026-05-02 22:20:38.600 | INFO     | app.agents.research_agent:router_node:110 - {'event': 'router_start', 'topic': 'AI in new age warfare'}
+2026-05-02 22:20:43.211 | SUCCESS  | app.agents.research_agent:router_node:127 - {'event': 'router_success', 'mode': 'hybrid'}
+2026-05-02 22:20:43.213 | INFO     | app.agents.research_agent:research_node:153 - {'event': 'research_start'}
+2026-05-02 22:20:43.213 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'current applications of AI in military technology', 'max_results': 5}
+2026-05-02 22:20:47.977 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'current applications of AI in military technology', 'results_count': 4, 'duration_sec': 4.76}
+2026-05-02 22:20:47.978 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'ethical implications of AI in autonomous weapons systems', 'max_results': 5}
+2026-05-02 22:20:49.866 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'ethical implications of AI in autonomous weapons systems', 'results_count': 4, 'duration_sec': 1.89}
+2026-05-02 22:20:49.867 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'international regulations and treaties on AI warfare', 'max_results': 5}
+2026-05-02 22:20:52.622 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'international regulations and treaties on AI warfare', 'results_count': 4, 'duration_sec': 2.76}
+2026-05-02 22:20:52.622 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'major countries investing in military AI development', 'max_results': 5}
+2026-05-02 22:20:55.776 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'major countries investing in military AI development', 'results_count': 4, 'duration_sec': 3.15}
+2026-05-02 22:20:55.777 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'impact of AI on cyber warfare and defense strategies', 'max_results': 5}
+2026-05-02 22:20:57.943 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'impact of AI on cyber warfare and defense strategies', 'results_count': 4, 'duration_sec': 2.17}
+2026-05-02 22:20:57.944 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'future trends and challenges of AI in modern conflict', 'max_results': 5}
+2026-05-02 22:20:59.572 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'future trends and challenges of AI in modern conflict', 'results_count': 4, 'duration_sec': 1.63}
+2026-05-02 22:20:59.573 | INFO     | app.services.web_search.search_tools:_duckduckgo_search:68 - {'event': 'duckduckgo_news_search_started', 'query': 'recent examples of AI use in military operations', 'max_results': 5}
+2026-05-02 22:21:01.053 | SUCCESS  | app.services.web_search.search_tools:_duckduckgo_search:96 - {'event': 'duckduckgo_news_success', 'query': 'recent examples of AI use in military operations', 'results_count': 4, 'duration_sec': 1.48}
+2026-05-02 22:21:05.423 | SUCCESS  | app.agents.research_agent:research_node:173 - {'event': 'research_success', 'count': 5}
+2026-05-02 22:21:05.425 | INFO     | app.agents.research_agent:orchestrator_node:189 - {'event': 'orchestrator_start'}
+2026-05-02 22:21:18.651 | SUCCESS  | app.agents.research_agent:orchestrator_node:200 - {'event': 'orchestrator_success', 'tasks': 7}
+2026-05-02 22:21:18.653 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 1}
+2026-05-02 22:21:18.657 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 2}
+2026-05-02 22:21:18.658 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 3}
+2026-05-02 22:21:18.659 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 4}
+2026-05-02 22:21:18.662 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 5}
+2026-05-02 22:21:18.662 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 6}
+2026-05-02 22:21:18.664 | INFO     | app.agents.research_agent:worker_node:241 - {'event': 'worker_start', 'task_id': 7}
+2026-05-02 22:21:28.052 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 1}
+2026-05-02 22:21:28.666 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 7}
+2026-05-02 22:21:29.493 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 2}
+2026-05-02 22:21:29.498 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 6}
+2026-05-02 22:21:30.508 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 4}
+2026-05-02 22:21:30.971 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 3}
+2026-05-02 22:21:32.558 | SUCCESS  | app.agents.research_agent:worker_node:250 - {'event': 'worker_success', 'task_id': 5}
+2026-05-02 22:21:32.561 | INFO     | app.agents.research_agent:merge_content:266 - {'event': 'merge_start'}
+2026-05-02 22:21:32.562 | SUCCESS  | app.agents.research_agent:merge_content:273 - {'event': 'merge_success'}
+2026-05-02 22:21:32.563 | INFO     | app.agents.research_agent:deside_image:289 - {'event': 'image_plan_start'}
+2026-05-02 22:22:00.586 | SUCCESS  | app.agents.research_agent:deside_image:309 - {'event': 'image_plan_success'}
+2026-05-02 22:22:40.831 | INFO     | app.api.routers.research_agent:research:22 - Research response generated successfully
