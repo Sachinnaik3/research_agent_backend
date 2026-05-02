@@ -1,337 +1,436 @@
-2026-04-16 12:42:31.570 | ERROR    | __main__:<module>:163 - {'event': 'agent_execution_failed', 'error': "'_SpecialGenericAlias' object does not support item assignment"}
-2026-04-16 12:42:31.579 | ERROR    | __main__:<module>:167 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 155, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 104, in research_node
-    raw = List[dict] = []
-          ~~~~^^^^^^
-TypeError: '_SpecialGenericAlias' object does not support item assignment
-During task with name 'research' and id '934c7ce0-b159-8c19-0480-315074a776fe'
+2026-05-01 15:16:11.521 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.523 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
 
-2026-04-16 12:47:47.328 | ERROR    | __main__:<module>:163 - {'event': 'agent_execution_failed', 'error': "'_SpecialGenericAlias' object does not support item assignment"}
-2026-04-16 12:47:47.334 | ERROR    | __main__:<module>:167 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 155, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 104, in research_node
-    raw = List[dict] = []
-          ~~~~^^^^^^
-TypeError: '_SpecialGenericAlias' object does not support item assignment
-During task with name 'research' and id '2587f0a2-7785-3423-9a73-cb9311fdb3da'
+During handling of the above exception, another exception occurred:
 
-2026-04-16 12:49:47.020 | ERROR    | __main__:<module>:163 - {'event': 'agent_execution_failed', 'error': "'_SpecialGenericAlias' object does not support item assignment"}
-2026-04-16 12:49:47.026 | ERROR    | __main__:<module>:167 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 155, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 104, in research_node
-    raw = List[dict] = []
-          ~~~~^^^^^^
-TypeError: '_SpecialGenericAlias' object does not support item assignment
-During task with name 'research' and id 'b761df8a-9ec1-4e95-8e42-aa6af5a81dd0'
-
-2026-04-16 12:50:20.089 | ERROR    | __main__:<module>:164 - {'event': 'agent_execution_failed', 'error': 'Expected dict, got [{\'title\': \'Top AI innovations in healthcare Sector | 5 Key Applications\', \'url\': \'https://techvitara.com/ai-innovations-in-healthcare/\', \'snippet\': \'... Intelligence (AI) in healthcare are ... FDA-approved tools like IdX-DR and Viz.AI are some examples of AI applications in healthcare diagnostics.\', \'source\': \'duckduckgo\'}, {\'title\': "Applications are open for \'AI in Healthcare\'", \'url\': \'https://www.clustercollaboration.eu/content/applications-are-open-ai-healthcare-programme\', \'snippet\': \'This short webinar at https://www.chwcluster.ie/ai-in-healthcare-information-webinar-playback/ will outline the programme structure, application ...\', \'source\': \'duckduckgo\'}, {\'title\': \'Top 10 AI Applications Revolutionizing Healthcare in 2025\', \'url\': \'https://www.ainvasion.com/ai-applications-revolutionizing-healthcare/\', \'snippet\': \'Top 10 AI Applications Revolutionizing Healthcare in 2025: Drive 40% Efficiency Gains and Save $360 Billion Annually\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in Healthcare: 2024’s Most Groundbreaking Applications -\', \'url\': \'https://www.hostalky.com/blog/ai-in-healthcare-2024s-most-groundbreaking-applications\', \'snippet\': \'Generative AI is improving clinical applications and significantly reducing administrative burdens in healthcare settings.\', \'source\': \'duckduckgo\'}, {\'title\': \'Artificial intelligence in healthcare - Wikipedia\', \'url\': \'https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare\', \'snippet\': \'These include AI Medical Innovation System (AIMIS), an AI-powered diagnostic medical imaging service; WeChat Intelligent Healthcare; and Tencent Doctorwork[153]. Another example, this time in the medical imaging space, is Optellum, an Oxford-based medical technology...\', \'source\': \'duckduckgo\'}, {\'title\': \'Google News - AI chatbots struggle with early medical diagnoses...\', \'url\': \'https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2pscE5udkVCR1ZBT1hzSzFJYVlDZ0FQAQ?hl=en-US&gl=US&ceid=US:en\', \'snippet\': \'Advancements in Large Language Models Boost Clinical Reasoning Performance.Relying on AI for health advice? Study finds 80% early diagnoses go wrong. 34 minutes ago. By Sarjna Rai.\', \'source\': \'duckduckgo\'}, {\'title\': \'All The Recent Advancements In Medical AI | Analytics India Magazine\', \'url\': \'https://analyticsindiamag.com/deep-tech/all-the-recent-advancements-in-medical-ai\', \'snippet\': \'How Far Is The Future? AI has the potential to transform the delivery of healthcare, from streamlining workflow processes to improving the accuracy of diagnosis and personalising treatment, as well as helping staff work more efficiently and effectively.\', \'source\': \'duckduckgo\'}, {\'title\': \'Exploring the Latest Advancements in AI-Driven Medical Diagnosis...\', \'url\': \'https://www.linkedin.com/pulse/exploring-latest-advancements-ai-driven-medical-diagnosis-drug-83lfc\', \'snippet\': \'Conclusion. AI-driven advancements in medical diagnosis, drug discovery, and personalized treatments are reshaping the future of healthcare. With improved efficiency and precision, these technologies hold immense potential to save lives and enhance patient care.\', \'source\': \'duckduckgo\'}, {\'title\': \'Amazon launches AI research tool to speed early-stage drug discovery | Reuters\', \'url\': \'https://www.reuters.com/business/healthcare-pharmaceuticals/amazon-launches-ai-research-tool-speed-early-stage-drug-discovery-2026-04-14/\', \'snippet\': "1 day ago - April 14 (Reuters) - Amazon\'s (AMZN.O), opens new tab cloud unit on Tuesday launched Amazon Bio Discovery, an artificial intelligence application designed to speed early-stage drug discovery by allowing scientists to run complex computational ...", \'source\': \'duckduckgo\'}, {\'title\': \'How digital tools and AI are accelerating drug discovery\', \'url\': \'https://www.drugdiscoverytrends.com/how-digital-tools-and-ai-are-accelerating-drug-discovery/\', \'snippet\': \'February 12, 2026 - AlphaFold and other generative AI tools transformed structure prediction and molecular design. One estimate projects the AI drug discovery market to grow from $4.6 billion in 2025 to $49.5 billion by 2034 at a CAGR of 30%.\', \'source\': \'duckduckgo\'}, {\'title\': \'Artificial Intelligence in Drug Discovery Market: Trends, Growth, and Forecast - PharmiWeb.com\', \'url\': \'https://www.pharmiweb.com/press-release/2026-04-13/artificial-intelligence-in-drug-discovery-market-trends-growth-and-forecast\', \'snippet\': \'3 days ago - AI companies bring advanced algorithms, machine learning models, and data analytics tools to the table, enabling the optimization of various stages of drug discovery—from target identification to clinical trials.\', \'source\': \'duckduckgo\'}, {\'title\': \'Building biology-native data infrastructure for the AI era - Bessemer Venture Partners\', \'url\': \'https://www.bvp.com/atlas/building-biology-native-data-infrastructure-for-the-ai-era\', \'snippet\': \'1 day ago - The limiting factor in drug development has never been a shortage of hypotheses, but rather a shortage of the resources to evaluate them effectively and efficiently. Machine learning in drug design holds the promise to change that math by accelerating iteration and improving the odds of success. Between 2012 and 2022, approximately 200 companies that leveraged AI for drug discovery raised a collective $18B.\', \'source\': \'duckduckgo\'}, {\'title\': \'Frontiers | Ethics of AI in healthcare: a scoping review demonstrating applicability of a foundational framework\', \'url\': \'https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1662642/full\', \'snippet\': \'August 25, 2025 - In this scoping review of 227 articles, we found that the four well-established principles of biomedical ethics (Beneficence, Non-Maleficence, Respect for Autonomy, and Justice) can provide a useful foundational framework for ethical application ...\', \'source\': \'duckduckgo\'}, {\'title\': \'Ethical and legal considerations in healthcare AI: innovation and policy for safe and fair use | Royal Society Open Science | The Royal Society\', \'url\': \'https://royalsocietypublishing.org/rsos/article/12/5/241873/235732/Ethical-and-legal-considerations-in-healthcare-AI\', \'snippet\': \'May 1, 2025 - Without clear accountability frameworks, the deployment of AI in critical healthcare functions risks undermining trust and ethical integrity. These foundational works underscore the need for a comprehensive approach that combines ethical principles ...\', \'source\': \'duckduckgo\'}, {\'title\': \'Frontiers | Ethical-legal implications of AI-powered healthcare in critical perspective\', \'url\': \'https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1619463/full\', \'snippet\': \'June 17, 2025 - This signals that AI-powered healthcare is the future (Singhal et al., 2023). Nonetheless, the burgeoning technological developments have spurred a range of ethical and legal concerns warranting critical examination (Hanna et al., 2025). This paper examines the questions of choice and responsibility arising with the large-scale collection and use of data by AI. It argues that by prioritizing ethical considerations in the development and deployment of AI, medical professionals can enhance health outcomes and cultivate patient trust, thereby bridging the gap between technological advancements and nuanced healthcare realities (Collins et al., 2024).\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in healthcare: legal and ethical considerations at the new frontier\', \'url\': \'https://www.aoshearman.com/en/insights/ao-shearman-on-life-sciences/ai-in-healthcare-legal-and-ethical-considerations-at-the-new-frontier\', \'snippet\': \'October 23, 2025 - It is therefore important to take a considered, nuanced approach when determining how any human-in-the-loop process flow should operate. AI offers significant benefits in healthcare but also presents legal and ethical challenges that must be navigated. Collaborative efforts among policymakers, healthcare professionals, AI developers, and legal experts are essential to establish robust frameworks that safeguard patient rights and promote equitable access to advanced healthcare technologies.\', \'source\': \'duckduckgo\'}, {\'title\': \'Artificial Intelligence in Healthcare: Current Regulatory Landscape and Future Directions - PubMed\', \'url\': \'https://pubmed.ncbi.nlm.nih.gov/40847984/\', \'snippet\': \'August 25, 2025 - To create standards that encourage innovation and address ethical and security concerns, collaboration between policymakers, AI developers and healthcare providers has a vital role. In this review, it was presented an overview of the current regulatory landscape for AI in healthcare, focusing primarily on frameworks in the European Union (EU), the United States (USA), and the United Kingdom (UK), which are leading countries in this regard.\', \'source\': \'duckduckgo\'}, {\'title\': \'Artificial intelligence in healthcare faces regulatory challenges: balancing innovation with human oversight - ScienceDirect\', \'url\': \'https://www.sciencedirect.com/science/article/pii/S3050708126000273\', \'snippet\': \'March 5, 2026 - Layered regulatory developments, notably the Medical Device Regulation of 2021 and the AI Act of 2024, have introduced stricter requirements for traceability, clinical performance, risk management, transparency, and human oversight.\', \'source\': \'duckduckgo\'}, {\'title\': \'The evolving regulatory landscape for artificial intelligence-enabled devices in the United States - ScienceDirect\', \'url\': \'https://www.sciencedirect.com/science/article/pii/S2949912725001072\', \'snippet\': \'September 12, 2025 - As artificial intelligence (AI) and machine learning methods spur ever-increasing and improving medical devices for use by physicians, the regulatory …\', \'source\': \'duckduckgo\'}, {\'title\': \'Regulatory Landscape for AI-enabled MedTech in APAC | Insights | Ropes & Gray LLP\', \'url\': \'https://www.ropesgray.com/en/insights/viewpoints/102k97d/regulatory-landscape-for-ai-enabled-medtech-in-apac\', \'snippet\': \'April 23, 2025 - Its National Artificial Intelligence Strategy 2.0 maps out Singapore’s commitment to building a trusted and responsible AI ecosystem, while its Artificial Intelligence in Healthcare Guidelines aim to improve understanding, codify good practice and support the safe growth of AI in healthcare. South Korea: The Digital Medical Products Act (January 2025) provides the basis for a regulatory framework governing digital medical devices.\', \'source\': \'duckduckgo\'}, {\'title\': \'Generative artificial intelligence - Wikipedia\', \'url\': \'https://en.wikipedia.org/wiki/Generative_artificial_intelligence\', \'snippet\': \'In healthcare, generative models are used in drug discovery research and in the creation of synthetic medical data for training diagnostic systems. In finance, they assist with report drafting, data generation, and customer service automation.\', \'source\': \'duckduckgo\'}, {\'title\': \'7 Things To Expect From AI In Healthcare This Year\', \'url\': \'https://www.linkedin.com/pulse/7-things-expect-from-ai-healthcare-year-bertalan-meskó-md-phd-ylrme\', \'snippet\': \'Generative AI has sparked a lot of interest among healthcare companies, particularly in patient management and chatbots.With major healthcare and tech companies launching generative AI platforms for patients, I expect the trust factor to improve throughout 2024.\', \'source\': \'duckduckgo\'}, {\'title\': \'How Generative AI + Quantified-Self Transforms Healthcare and...\', \'url\': \'https://www.linkedin.com/pulse/how-generative-ai-quantified-self-transforms-healthcare-flora-bui-47s4c\', \'snippet\': \'AI-powered health apps can analyze our activity levels, sleep patterns, and dietary habits to provide personalized fitness and nutrition advice.The impact of Generative AI on healthcare is truly transformative.\', \'source\': \'duckduckgo\'}, {\'title\': \'Generative AI is finding fertile soil in the healthcare... - Fast Company\', \'url\': \'https://www.fastcompany.com/91358402/generative-ai-is-finding-fertile-soil-in-the-healthcare-industry\', \'snippet\': \'Bringing AI to the doctor’s appointment. AI in healthcare is top of mind this week, thanks to a viral story on Reddit about a man who said ChatGPT saved his wife’s life. She had undergone a cyst removal and wasn’t feeling well, but was on an antibiotic and decided to “wait it out.”\', \'source\': \'duckduckgo\'}, {\'title\': \'Challenges of AI Adoption in Healthcare - Simonandstingtour\', \'url\': \'https://simonandstingtour.com/challenges-of-ai-adoption-in-healthcare/\', \'snippet\': \'This article explores the multifaceted challenges of AI adoption in healthcare, providing a comprehensive overview of the barriers to implementation ...\', \'source\': \'duckduckgo\'}, {\'title\': \'Understanding AI Adoption Challenges in Modern Healthcare\', \'url\': \'https://www.kandasoft.com/blog/challenges-of-ai-adoption-in-healthcare\', \'snippet\': \'With so many high-profile successes touting the promise of AI in healthcare, developers can too easily underestimate the challenges that must be ...\', \'source\': \'duckduckgo\'}, {\'title\': \'The Three Challenges to AI Adoption in Healthcare - Future\', \'url\': \'https://futurehealthcaretoday.com/the-three-challenges-to-ai-adoption-in-healthcare/\', \'snippet\': \'To overcome the challenges associated with AI adoption and implementation healthcare organizations need the right infrastructure and management.\', \'source\': \'duckduckgo\'}, {\'title\': \'Healthcare AI adoption up, but data and integration challenges\', \'url\': \'https://www.healthcareitnews.com/news/healthcare-ai-adoption-data-and-integration-challenges-persist\', \'snippet\': \'... these advances, challenges remain, with around 47% of healthcare leaders citing data quality and integration issues as major barriers to AI adoption ...\', \'source\': \'duckduckgo\'}]\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_GRAPH_NODE_RETURN_VALUE'}
-2026-04-16 12:50:20.103 | ERROR    | __main__:<module>:168 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 156, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 658, in invoke
-    input = step.invoke(input, config)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 84, in _write
-    self.do_write(
-    ~~~~~~~~~~~~~^
-        config,
-        ^^^^^^^
-        writes,
-        ^^^^^^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 126, in do_write
-    write(_assemble_writes(writes))
-          ~~~~~~~~~~~~~~~~^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 181, in _assemble_writes
-    if ww := w.mapper(w.value):
-             ~~~~~~~~^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\graph\state.py", line 1284, in _get_updates
-    raise InvalidUpdateError(msg)
-langgraph.errors.InvalidUpdateError: Expected dict, got [{'title': 'Top AI innovations in healthcare Sector | 5 Key Applications', 'url': 'https://techvitara.com/ai-innovations-in-healthcare/', 'snippet': '... Intelligence (AI) in healthcare are ... FDA-approved tools like IdX-DR and Viz.AI are some examples of AI applications in healthcare diagnostics.', 'source': 'duckduckgo'}, {'title': "Applications are open for 'AI in Healthcare'", 'url': 'https://www.clustercollaboration.eu/content/applications-are-open-ai-healthcare-programme', 'snippet': 'This short webinar at https://www.chwcluster.ie/ai-in-healthcare-information-webinar-playback/ will outline the programme structure, application ...', 'source': 'duckduckgo'}, {'title': 'Top 10 AI Applications Revolutionizing Healthcare in 2025', 'url': 'https://www.ainvasion.com/ai-applications-revolutionizing-healthcare/', 'snippet': 'Top 10 AI Applications Revolutionizing Healthcare in 2025: Drive 40% Efficiency Gains and Save $360 Billion Annually', 'source': 'duckduckgo'}, {'title': 'AI in Healthcare: 2024’s Most Groundbreaking Applications -', 'url': 'https://www.hostalky.com/blog/ai-in-healthcare-2024s-most-groundbreaking-applications', 'snippet': 'Generative AI is improving clinical applications and significantly reducing administrative burdens in healthcare settings.', 'source': 'duckduckgo'}, {'title': 'Artificial intelligence in healthcare - Wikipedia', 'url': 'https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare', 'snippet': 'These include AI Medical Innovation System (AIMIS), an AI-powered diagnostic medical imaging service; WeChat Intelligent Healthcare; and Tencent Doctorwork[153]. Another example, this time in the medical imaging space, is Optellum, an Oxford-based medical technology...', 'source': 'duckduckgo'}, {'title': 'Google News - AI chatbots struggle with early medical diagnoses...', 'url': 'https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2pscE5udkVCR1ZBT1hzSzFJYVlDZ0FQAQ?hl=en-US&gl=US&ceid=US:en', 'snippet': 'Advancements in Large Language Models Boost Clinical Reasoning Performance.Relying on AI for health advice? Study finds 80% early diagnoses go wrong. 34 minutes ago. By Sarjna Rai.', 'source': 'duckduckgo'}, {'title': 'All The Recent Advancements In Medical AI | Analytics India Magazine', 'url': 'https://analyticsindiamag.com/deep-tech/all-the-recent-advancements-in-medical-ai', 'snippet': 'How Far Is The Future? AI has the potential to transform the delivery of healthcare, from streamlining workflow processes to improving the accuracy of diagnosis and personalising treatment, as well as helping staff work more efficiently and effectively.', 'source': 'duckduckgo'}, {'title': 'Exploring the Latest Advancements in AI-Driven Medical Diagnosis...', 'url': 'https://www.linkedin.com/pulse/exploring-latest-advancements-ai-driven-medical-diagnosis-drug-83lfc', 'snippet': 'Conclusion. AI-driven advancements in medical diagnosis, drug discovery, and personalized treatments are reshaping the future of healthcare. With improved efficiency and precision, these technologies hold immense potential to save lives and enhance patient care.', 'source': 'duckduckgo'}, {'title': 'Amazon launches AI research tool to speed early-stage drug discovery | Reuters', 'url': 'https://www.reuters.com/business/healthcare-pharmaceuticals/amazon-launches-ai-research-tool-speed-early-stage-drug-discovery-2026-04-14/', 'snippet': "1 day ago - April 14 (Reuters) - Amazon's (AMZN.O), opens new tab cloud unit on Tuesday launched Amazon Bio Discovery, an artificial intelligence application designed to speed early-stage drug discovery by allowing scientists to run complex computational ...", 'source': 'duckduckgo'}, {'title': 'How digital tools and AI are accelerating drug discovery', 'url': 'https://www.drugdiscoverytrends.com/how-digital-tools-and-ai-are-accelerating-drug-discovery/', 'snippet': 'February 12, 2026 - AlphaFold and other generative AI tools transformed structure prediction and molecular design. One estimate projects the AI drug discovery market to grow from $4.6 billion in 2025 to $49.5 billion by 2034 at a CAGR of 30%.', 'source': 'duckduckgo'}, {'title': 'Artificial Intelligence in Drug Discovery Market: Trends, Growth, and Forecast - PharmiWeb.com', 'url': 'https://www.pharmiweb.com/press-release/2026-04-13/artificial-intelligence-in-drug-discovery-market-trends-growth-and-forecast', 'snippet': '3 days ago - AI companies bring advanced algorithms, machine learning models, and data analytics tools to the table, enabling the optimization of various stages of drug discovery—from target identification to clinical trials.', 'source': 'duckduckgo'}, {'title': 'Building biology-native data infrastructure for the AI era - Bessemer Venture Partners', 'url': 'https://www.bvp.com/atlas/building-biology-native-data-infrastructure-for-the-ai-era', 'snippet': '1 day ago - The limiting factor in drug development has never been a shortage of hypotheses, but rather a shortage of the resources to evaluate them effectively and efficiently. Machine learning in drug design holds the promise to change that math by accelerating iteration and improving the odds of success. Between 2012 and 2022, approximately 200 companies that leveraged AI for drug discovery raised a collective $18B.', 'source': 'duckduckgo'}, {'title': 'Frontiers | Ethics of AI in healthcare: a scoping review demonstrating applicability of a foundational framework', 'url': 'https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1662642/full', 'snippet': 'August 25, 2025 - In this scoping review of 227 articles, we found that the four well-established principles of biomedical ethics (Beneficence, Non-Maleficence, Respect for Autonomy, and Justice) can provide a useful foundational framework for ethical application ...', 'source': 'duckduckgo'}, {'title': 'Ethical and legal considerations in healthcare AI: innovation and policy for safe and fair use | Royal Society Open Science | The Royal Society', 'url': 'https://royalsocietypublishing.org/rsos/article/12/5/241873/235732/Ethical-and-legal-considerations-in-healthcare-AI', 'snippet': 'May 1, 2025 - Without clear accountability frameworks, the deployment of AI in critical healthcare functions risks undermining trust and ethical integrity. These foundational works underscore the need for a comprehensive approach that combines ethical principles ...', 'source': 'duckduckgo'}, {'title': 'Frontiers | Ethical-legal implications of AI-powered healthcare in critical perspective', 'url': 'https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1619463/full', 'snippet': 'June 17, 2025 - This signals that AI-powered healthcare is the future (Singhal et al., 2023). Nonetheless, the burgeoning technological developments have spurred a range of ethical and legal concerns warranting critical examination (Hanna et al., 2025). This paper examines the questions of choice and responsibility arising with the large-scale collection and use of data by AI. It argues that by prioritizing ethical considerations in the development and deployment of AI, medical professionals can enhance health outcomes and cultivate patient trust, thereby bridging the gap between technological advancements and nuanced healthcare realities (Collins et al., 2024).', 'source': 'duckduckgo'}, {'title': 'AI in healthcare: legal and ethical considerations at the new frontier', 'url': 'https://www.aoshearman.com/en/insights/ao-shearman-on-life-sciences/ai-in-healthcare-legal-and-ethical-considerations-at-the-new-frontier', 'snippet': 'October 23, 2025 - It is therefore important to take a considered, nuanced approach when determining how any human-in-the-loop process flow should operate. AI offers significant benefits in healthcare but also presents legal and ethical challenges that must be navigated. Collaborative efforts among policymakers, healthcare professionals, AI developers, and legal experts are essential to establish robust frameworks that safeguard patient rights and promote equitable access to advanced healthcare technologies.', 'source': 'duckduckgo'}, {'title': 'Artificial Intelligence in Healthcare: Current Regulatory Landscape and Future Directions - PubMed', 'url': 'https://pubmed.ncbi.nlm.nih.gov/40847984/', 'snippet': 'August 25, 2025 - To create standards that encourage innovation and address ethical and security concerns, collaboration between policymakers, AI developers and healthcare providers has a vital role. In this review, it was presented an overview of the current regulatory landscape for AI in healthcare, focusing primarily on frameworks in the European Union (EU), the United States (USA), and the United Kingdom (UK), which are leading countries in this regard.', 'source': 'duckduckgo'}, {'title': 'Artificial intelligence in healthcare faces regulatory challenges: balancing innovation with human oversight - ScienceDirect', 'url': 'https://www.sciencedirect.com/science/article/pii/S3050708126000273', 'snippet': 'March 5, 2026 - Layered regulatory developments, notably the Medical Device Regulation of 2021 and the AI Act of 2024, have introduced stricter requirements for traceability, clinical performance, risk management, transparency, and human oversight.', 'source': 'duckduckgo'}, {'title': 'The evolving regulatory landscape for artificial intelligence-enabled devices in the United States - ScienceDirect', 'url': 'https://www.sciencedirect.com/science/article/pii/S2949912725001072', 'snippet': 'September 12, 2025 - As artificial intelligence (AI) and machine learning methods spur ever-increasing and improving medical devices for use by physicians, the regulatory …', 'source': 'duckduckgo'}, {'title': 'Regulatory Landscape for AI-enabled MedTech in APAC | Insights | Ropes & Gray LLP', 'url': 'https://www.ropesgray.com/en/insights/viewpoints/102k97d/regulatory-landscape-for-ai-enabled-medtech-in-apac', 'snippet': 'April 23, 2025 - Its National Artificial Intelligence Strategy 2.0 maps out Singapore’s commitment to building a trusted and responsible AI ecosystem, while its Artificial Intelligence in Healthcare Guidelines aim to improve understanding, codify good practice and support the safe growth of AI in healthcare. South Korea: The Digital Medical Products Act (January 2025) provides the basis for a regulatory framework governing digital medical devices.', 'source': 'duckduckgo'}, {'title': 'Generative artificial intelligence - Wikipedia', 'url': 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence', 'snippet': 'In healthcare, generative models are used in drug discovery research and in the creation of synthetic medical data for training diagnostic systems. In finance, they assist with report drafting, data generation, and customer service automation.', 'source': 'duckduckgo'}, {'title': '7 Things To Expect From AI In Healthcare This Year', 'url': 'https://www.linkedin.com/pulse/7-things-expect-from-ai-healthcare-year-bertalan-meskó-md-phd-ylrme', 'snippet': 'Generative AI has sparked a lot of interest among healthcare companies, particularly in patient management and chatbots.With major healthcare and tech companies launching generative AI platforms for patients, I expect the trust factor to improve throughout 2024.', 'source': 'duckduckgo'}, {'title': 'How Generative AI + Quantified-Self Transforms Healthcare and...', 'url': 'https://www.linkedin.com/pulse/how-generative-ai-quantified-self-transforms-healthcare-flora-bui-47s4c', 'snippet': 'AI-powered health apps can analyze our activity levels, sleep patterns, and dietary habits to provide personalized fitness and nutrition advice.The impact of Generative AI on healthcare is truly transformative.', 'source': 'duckduckgo'}, {'title': 'Generative AI is finding fertile soil in the healthcare... - Fast Company', 'url': 'https://www.fastcompany.com/91358402/generative-ai-is-finding-fertile-soil-in-the-healthcare-industry', 'snippet': 'Bringing AI to the doctor’s appointment. AI in healthcare is top of mind this week, thanks to a viral story on Reddit about a man who said ChatGPT saved his wife’s life. She had undergone a cyst removal and wasn’t feeling well, but was on an antibiotic and decided to “wait it out.”', 'source': 'duckduckgo'}, {'title': 'Challenges of AI Adoption in Healthcare - Simonandstingtour', 'url': 'https://simonandstingtour.com/challenges-of-ai-adoption-in-healthcare/', 'snippet': 'This article explores the multifaceted challenges of AI adoption in healthcare, providing a comprehensive overview of the barriers to implementation ...', 'source': 'duckduckgo'}, {'title': 'Understanding AI Adoption Challenges in Modern Healthcare', 'url': 'https://www.kandasoft.com/blog/challenges-of-ai-adoption-in-healthcare', 'snippet': 'With so many high-profile successes touting the promise of AI in healthcare, developers can too easily underestimate the challenges that must be ...', 'source': 'duckduckgo'}, {'title': 'The Three Challenges to AI Adoption in Healthcare - Future', 'url': 'https://futurehealthcaretoday.com/the-three-challenges-to-ai-adoption-in-healthcare/', 'snippet': 'To overcome the challenges associated with AI adoption and implementation healthcare organizations need the right infrastructure and management.', 'source': 'duckduckgo'}, {'title': 'Healthcare AI adoption up, but data and integration challenges', 'url': 'https://www.healthcareitnews.com/news/healthcare-ai-adoption-data-and-integration-challenges-persist', 'snippet': '... these advances, challenges remain, with around 47% of healthcare leaders citing data quality and integration issues as major barriers to AI adoption ...', 'source': 'duckduckgo'}]
-For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_GRAPH_NODE_RETURN_VALUE
-During task with name 'research' and id '35bd7fda-221a-2eb9-ac53-19285677b244'
-
-2026-04-16 12:52:44.667 | ERROR    | __main__:<module>:163 - {'event': 'agent_execution_failed', 'error': 'Expected dict, got [{\'title\': \'17 Top AI Medical Diagnostic Apps in 2024 - SevenTech\', \'url\': \'https://www.seventech.ai/ai-medical-diagnostic-apps/\', \'snippet\': \'Applications of AI in medicine have the amazing potential to completely transform the healthcare sector. ... interact with Molly and a number of other ...\', \'source\': \'duckduckgo\'}, {\'title\': \'AI Influence on Medical Diagnostics Generating Billion Dollar\', \'url\': \'https://www.financialnewsmedia.com/ai-influence-on-medical-diagnostics-generating-billion-dollar-revenues-while-growing-adoption-reduces-healthcare-costs/\', \'snippet\': \'In diagnostic testing, AI is used to analyze medical images (CT scans, X-rays, ultrasounds, MRIs, and DXAs), large patient data, vital signs ...\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in medical diagnostics and decision-making | TechTarget\', \'url\': \'https://www.techtarget.com/searchenterpriseai/feature/AI-in-medical-diagnostics-and-decision-making\', \'snippet\': "... AI use cases in healthcare focus on optimizing medical diagnostics ... AI\'s role in the medical field extends beyond diagnostics and decision-making.", \'source\': \'duckduckgo\'}, {\'title\': \'AI In Medical Diagnostics Market In 2029 | Health Industry Watch\', \'url\': \'https://www.healthindustrywatch.com/article/878401404-ai-in-medical-diagnostics-market-in-2029\', \'snippet\': \'The AI in medical diagnostics market is segmented by application into computer-aided detection, computer-aided diagnosis, quantitative analysis tools ...\', \'source\': \'duckduckgo\'}, {\'title\': \'Amazon launches AI research tool to speed early-stage drug discovery | Reuters\', \'url\': \'https://www.reuters.com/business/healthcare-pharmaceuticals/amazon-launches-ai-research-tool-speed-early-stage-drug-discovery-2026-04-14/\', \'snippet\': "1 day ago - April 14 (Reuters) - Amazon\'s (AMZN.O), opens new tab cloud unit on Tuesday launched Amazon Bio Discovery, an artificial intelligence application designed to speed early-stage drug discovery by allowing scientists to run complex computational ...", \'source\': \'duckduckgo\'}, {\'title\': \'From Algorithm to Medicine: AI in the Discovery and Development of New Drugs\', \'url\': \'https://www.mdpi.com/2673-2688/7/1/26\', \'snippet\': \'January 14, 2026 - The reviewed evidence indicates that AI has significantly accelerated drug discovery and development by reducing timeframes, costs, and failure rates. AI-based approaches have enhanced the efficiency of target identification, optimized lead ...\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in drug discovery: predictions for 2026 | Opinion | Drug Target Review\', \'url\': \'https://www.drugtargetreview.com/article/192962/ai-in-drug-discovery-predictions-for-2026/\', \'snippet\': \'2 weeks ago - AI-enabled workflows will demonstrably compress early discovery timelines by 30-40 percent and reduce preclinical candidate development to 13-18 months (versus traditional three to four years).\', \'source\': \'duckduckgo\'}, {\'title\': \'Artificial intelligence in drug discovery and development: transforming challenges into opportunities | Discover Pharmaceutical Sciences | Springer Nature Link\', \'url\': \'https://link.springer.com/article/10.1007/s44395-025-00007-3\', \'snippet\': \'June 2, 2025 - Future advancements in AI-powered drug discovery will require a focus on improving data standardization, fostering transparency in AI model development, and strengthening collaboration between AI researchers and pharmaceutical experts.\', \'source\': \'duckduckgo\'}, {\'title\': \'Ethical and legal considerations in healthcare AI: innovation and policy for safe and fair use | Royal Society Open Science | The Royal Society\', \'url\': \'https://royalsocietypublishing.org/rsos/article/12/5/241873/235732/Ethical-and-legal-considerations-in-healthcare-AI\', \'snippet\': \'May 1, 2025 - Legal challenges, including data privacy and security, liability for AI errors, regulatory approval processes, intellectual property and cross-border regulations, are also addressed.\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in healthcare: legal and ethical considerations at the new frontier\', \'url\': \'https://www.aoshearman.com/en/insights/ao-shearman-on-life-sciences/ai-in-healthcare-legal-and-ethical-considerations-at-the-new-frontier\', \'snippet\': \'October 23, 2025 - But to get there will require robust regulatory frameworks to address safety, privacy, and bias concerns—as well as scenario-based assessments to ensure AI’s safe and ethical deployment.\', \'source\': \'duckduckgo\'}, {\'title\': \'Frontiers | Ethics of AI in healthcare: a scoping review demonstrating applicability of a foundational framework\', \'url\': \'https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1662642/full\', \'snippet\': \'August 25, 2025 - Indeed, ethical issues and unknowns raised by involvement of AI in healthcare are evolving as quickly as the technology itself, while regulatory governance currently lags behind (e.g., explicit permission to use patient data for training AI models) ...\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in Healthcare: Ethical & Regulatory Hurdles\', \'url\': \'https://www.birlasoft.com/articles/artificial-intelligence-in-healthcare-addressing-ethical-and-regulatory-hurdles\', \'snippet\': \'June 24, 2025 - ... The current challenge lies in the abstract nature of AI concepts. AI systems must become more transparent, specific, and reliably accurate to realize the tangible effects mentioned earlier.\', \'source\': \'duckduckgo\'}, {\'title\': \'The Impact of Artificial Intelligence on Personalized Medicine: a ...\', \'url\': \'https://fmhr.net/index.php/fmhr/article/view/341\', \'snippet\': "This article explores AI\'s current role, challenges, and future possibilities in personalized medicine, highlighting its potential to transform healthcare and improve patient outcomes. As AI continues to evolve, it is essential to prioritize patient-centered care, ensure data security, and promote transparency in AI decision-making processes.", \'source\': \'duckduckgo\'}, {\'title\': \'AI Applications in Healthcare and Personalized Medicine\', \'url\': \'https://link.springer.com/chapter/10.1007/978-3-032-02705-4_14\', \'snippet\': \'The role of AI in personalized medicine is underscored by its ability to analyze extensive genomic, clinical, and lifestyle data, enabling highly tailored treatment strategies that improve patient outcomes.\', \'source\': \'duckduckgo\'}, {\'title\': \'The expanding role of artificial intelligence in personalised medicine ...\', \'url\': \'https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1795879/full\', \'snippet\': \'The role of AI in personalized treatment AI is transforming precision medicine by analyzing large, diverse patient data, including genetics, clinical histories, imaging, and lifestyle factors. This analysis enables the detection of complexities and patient subgroups, supporting personalized treatment plans. Advanced Machine Learning (ML) and Deep Learning (DL) techniques boost diagnostic ...\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in Personalized Treatment Plans: Top Use Cases & Benefits\', \'url\': \'https://appinventiv.com/blog/ai-in-personalized-treatment-plans/\', \'snippet\': "Here\'s how AI-driven personalized medicine plays a crucial role in improving patient care and outcomes: Predictive Insights: Artificial intelligence in personalized medicine analyzes genetic, clinical, and lifestyle data to predict disease risk and suggest interventions at an early stage.", \'source\': \'duckduckgo\'}, {\'title\': \'Artificial intelligence in healthcare - Wikipedia\', \'url\': \'https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare\', \'snippet\': \'X-ray of a hand, with automatic calculation of bone age by a computer software. Artificial intelligence in healthcare is the application of artificial intelligence (AI) to analyze and understand complex medical and healthcare data.\', \'source\': \'duckduckgo\'}, {\'title\': \'The Future of AI: How AI Is Changing the World | Built In\', \'url\': \'https://builtin.com/artificial-intelligence/artificial-intelligence-future\', \'snippet\': \'The future of AI includes expanded roles in daily life, from supporting human care and household tasks to boosting workplace research and efficiency, powered by advances in generative models, automation and intelligent decision-making.\', \'source\': \'duckduckgo\'}, {\'title\': \'grandviewresearch.com/industry-analysis/artificial-intelligence-ai...\', \'url\': \'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-healthcare-market\', \'snippet\': \'AI in Healthcare: Market Trends and Forecasts.\', \'source\': \'duckduckgo\'}, {\'title\': \'Digital Health Trends 2024 | IQVIA\', \'url\': \'https://www.iqvia.com/insights/the-iqvia-institute/reports-and-publications/reports/digital-health-trends-2024\', \'snippet\': \'AI Insights & Thought Leadership. Get in-depth, expert perspectives on mission critical AI topics, trends, and emerging capabilities..Clinical decision support (CDS) tools that assess patient health data to help inform providers as they diagnose disease.\', \'source\': \'duckduckgo\'}, {\'title\': \'(PDF) Data Privacy and Security Concerns in AI-Driven Healthcare\', \'url\': \'https://www.researchgate.net/publication/394275058_Data_Privacy_and_Security_Concerns_in_AI-Driven_Healthcare\', \'snippet\': \'This paper critically explores the multifaceted issues surrounding data privacy and security in AI-driven healthcare, identifying key risks, legal challenges, and emerging solutions.\', \'source\': \'duckduckgo\'}, {\'title\': \'AI in Healthcare: Security and Privacy Concerns - lepide.com\', \'url\': \'https://www.lepide.com/blog/ai-in-healthcare-security-and-privacy-concerns/\', \'snippet\': \'AI is transforming healthcare, but at what cost? Explore the security and privacy risks of AI-driven healthcare and how to safeguard patient data.\', \'source\': \'duckduckgo\'}, {\'title\': \'Medical Data Privacy and Security in the AI Age - Springer\', \'url\': \'https://link.springer.com/chapter/10.1007/978-3-031-94690-5_14\', \'snippet\': \'This chapter examines challenges to medical data privacy and security in the age of artificial intelligence (AI). It analyzes how AI intensifies concerns about health record privacy and security and evaluates key elements of federal legal oversight, including the...\', \'source\': \'duckduckgo\'}, {\'title\': \'Data Privacy in the Age of AI: Who protects our Health Data?\', \'url\': \'https://data2evidence.org/knowledge/data-privacy-in-the-age-of-ai/\', \'snippet\': \'To achieve this, policymakers, healthcare providers, and technology companies must collaborate on stronger laws, transparent practices, and privacy-preserving AI solutions. Protecting healthcare data in the AI era requires a multi-layered strategy: AI privacy policies must be updated to address data flows, model training, and user consent.\', \'source\': \'duckduckgo\'}]\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_GRAPH_NODE_RETURN_VALUE'}
-2026-04-16 12:52:44.704 | ERROR    | __main__:<module>:167 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 155, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 658, in invoke
-    input = step.invoke(input, config)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 84, in _write
-    self.do_write(
-    ~~~~~~~~~~~~~^
-        config,
-        ^^^^^^^
-        writes,
-        ^^^^^^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 126, in do_write
-    write(_assemble_writes(writes))
-          ~~~~~~~~~~~~~~~~^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_write.py", line 181, in _assemble_writes
-    if ww := w.mapper(w.value):
-             ~~~~~~~~^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\graph\state.py", line 1284, in _get_updates
-    raise InvalidUpdateError(msg)
-langgraph.errors.InvalidUpdateError: Expected dict, got [{'title': '17 Top AI Medical Diagnostic Apps in 2024 - SevenTech', 'url': 'https://www.seventech.ai/ai-medical-diagnostic-apps/', 'snippet': 'Applications of AI in medicine have the amazing potential to completely transform the healthcare sector. ... interact with Molly and a number of other ...', 'source': 'duckduckgo'}, {'title': 'AI Influence on Medical Diagnostics Generating Billion Dollar', 'url': 'https://www.financialnewsmedia.com/ai-influence-on-medical-diagnostics-generating-billion-dollar-revenues-while-growing-adoption-reduces-healthcare-costs/', 'snippet': 'In diagnostic testing, AI is used to analyze medical images (CT scans, X-rays, ultrasounds, MRIs, and DXAs), large patient data, vital signs ...', 'source': 'duckduckgo'}, {'title': 'AI in medical diagnostics and decision-making | TechTarget', 'url': 'https://www.techtarget.com/searchenterpriseai/feature/AI-in-medical-diagnostics-and-decision-making', 'snippet': "... AI use cases in healthcare focus on optimizing medical diagnostics ... AI's role in the medical field extends beyond diagnostics and decision-making.", 'source': 'duckduckgo'}, {'title': 'AI In Medical Diagnostics Market In 2029 | Health Industry Watch', 'url': 'https://www.healthindustrywatch.com/article/878401404-ai-in-medical-diagnostics-market-in-2029', 'snippet': 'The AI in medical diagnostics market is segmented by application into computer-aided detection, computer-aided diagnosis, quantitative analysis tools ...', 'source': 'duckduckgo'}, {'title': 'Amazon launches AI research tool to speed early-stage drug discovery | Reuters', 'url': 'https://www.reuters.com/business/healthcare-pharmaceuticals/amazon-launches-ai-research-tool-speed-early-stage-drug-discovery-2026-04-14/', 'snippet': "1 day ago - April 14 (Reuters) - Amazon's (AMZN.O), opens new tab cloud unit on Tuesday launched Amazon Bio Discovery, an artificial intelligence application designed to speed early-stage drug discovery by allowing scientists to run complex computational ...", 'source': 'duckduckgo'}, {'title': 'From Algorithm to Medicine: AI in the Discovery and Development of New Drugs', 'url': 'https://www.mdpi.com/2673-2688/7/1/26', 'snippet': 'January 14, 2026 - The reviewed evidence indicates that AI has significantly accelerated drug discovery and development by reducing timeframes, costs, and failure rates. AI-based approaches have enhanced the efficiency of target identification, optimized lead ...', 'source': 'duckduckgo'}, {'title': 'AI in drug discovery: predictions for 2026 | Opinion | Drug Target Review', 'url': 'https://www.drugtargetreview.com/article/192962/ai-in-drug-discovery-predictions-for-2026/', 'snippet': '2 weeks ago - AI-enabled workflows will demonstrably compress early discovery timelines by 30-40 percent and reduce preclinical candidate development to 13-18 months (versus traditional three to four years).', 'source': 'duckduckgo'}, {'title': 'Artificial intelligence in drug discovery and development: transforming challenges into opportunities | Discover Pharmaceutical Sciences | Springer Nature Link', 'url': 'https://link.springer.com/article/10.1007/s44395-025-00007-3', 'snippet': 'June 2, 2025 - Future advancements in AI-powered drug discovery will require a focus on improving data standardization, fostering transparency in AI model development, and strengthening collaboration between AI researchers and pharmaceutical experts.', 'source': 'duckduckgo'}, {'title': 'Ethical and legal considerations in healthcare AI: innovation and policy for safe and fair use | Royal Society Open Science | The Royal Society', 'url': 'https://royalsocietypublishing.org/rsos/article/12/5/241873/235732/Ethical-and-legal-considerations-in-healthcare-AI', 'snippet': 'May 1, 2025 - Legal challenges, including data privacy and security, liability for AI errors, regulatory approval processes, intellectual property and cross-border regulations, are also addressed.', 'source': 'duckduckgo'}, {'title': 'AI in healthcare: legal and ethical considerations at the new frontier', 'url': 'https://www.aoshearman.com/en/insights/ao-shearman-on-life-sciences/ai-in-healthcare-legal-and-ethical-considerations-at-the-new-frontier', 'snippet': 'October 23, 2025 - But to get there will require robust regulatory frameworks to address safety, privacy, and bias concerns—as well as scenario-based assessments to ensure AI’s safe and ethical deployment.', 'source': 'duckduckgo'}, {'title': 'Frontiers | Ethics of AI in healthcare: a scoping review demonstrating applicability of a foundational framework', 'url': 'https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1662642/full', 'snippet': 'August 25, 2025 - Indeed, ethical issues and unknowns raised by involvement of AI in healthcare are evolving as quickly as the technology itself, while regulatory governance currently lags behind (e.g., explicit permission to use patient data for training AI models) ...', 'source': 'duckduckgo'}, {'title': 'AI in Healthcare: Ethical & Regulatory Hurdles', 'url': 'https://www.birlasoft.com/articles/artificial-intelligence-in-healthcare-addressing-ethical-and-regulatory-hurdles', 'snippet': 'June 24, 2025 - ... The current challenge lies in the abstract nature of AI concepts. AI systems must become more transparent, specific, and reliably accurate to realize the tangible effects mentioned earlier.', 'source': 'duckduckgo'}, {'title': 'The Impact of Artificial Intelligence on Personalized Medicine: a ...', 'url': 'https://fmhr.net/index.php/fmhr/article/view/341', 'snippet': "This article explores AI's current role, challenges, and future possibilities in personalized medicine, highlighting its potential to transform healthcare and improve patient outcomes. As AI continues to evolve, it is essential to prioritize patient-centered care, ensure data security, and promote transparency in AI decision-making processes.", 'source': 'duckduckgo'}, {'title': 'AI Applications in Healthcare and Personalized Medicine', 'url': 'https://link.springer.com/chapter/10.1007/978-3-032-02705-4_14', 'snippet': 'The role of AI in personalized medicine is underscored by its ability to analyze extensive genomic, clinical, and lifestyle data, enabling highly tailored treatment strategies that improve patient outcomes.', 'source': 'duckduckgo'}, {'title': 'The expanding role of artificial intelligence in personalised medicine ...', 'url': 'https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1795879/full', 'snippet': 'The role of AI in personalized treatment AI is transforming precision medicine by analyzing large, diverse patient data, including genetics, clinical histories, imaging, and lifestyle factors. This analysis enables the detection of complexities and patient subgroups, supporting personalized treatment plans. Advanced Machine Learning (ML) and Deep Learning (DL) techniques boost diagnostic ...', 'source': 'duckduckgo'}, {'title': 'AI in Personalized Treatment Plans: Top Use Cases & Benefits', 'url': 'https://appinventiv.com/blog/ai-in-personalized-treatment-plans/', 'snippet': "Here's how AI-driven personalized medicine plays a crucial role in improving patient care and outcomes: Predictive Insights: Artificial intelligence in personalized medicine analyzes genetic, clinical, and lifestyle data to predict disease risk and suggest interventions at an early stage.", 'source': 'duckduckgo'}, {'title': 'Artificial intelligence in healthcare - Wikipedia', 'url': 'https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare', 'snippet': 'X-ray of a hand, with automatic calculation of bone age by a computer software. Artificial intelligence in healthcare is the application of artificial intelligence (AI) to analyze and understand complex medical and healthcare data.', 'source': 'duckduckgo'}, {'title': 'The Future of AI: How AI Is Changing the World | Built In', 'url': 'https://builtin.com/artificial-intelligence/artificial-intelligence-future', 'snippet': 'The future of AI includes expanded roles in daily life, from supporting human care and household tasks to boosting workplace research and efficiency, powered by advances in generative models, automation and intelligent decision-making.', 'source': 'duckduckgo'}, {'title': 'grandviewresearch.com/industry-analysis/artificial-intelligence-ai...', 'url': 'https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-healthcare-market', 'snippet': 'AI in Healthcare: Market Trends and Forecasts.', 'source': 'duckduckgo'}, {'title': 'Digital Health Trends 2024 | IQVIA', 'url': 'https://www.iqvia.com/insights/the-iqvia-institute/reports-and-publications/reports/digital-health-trends-2024', 'snippet': 'AI Insights & Thought Leadership. Get in-depth, expert perspectives on mission critical AI topics, trends, and emerging capabilities..Clinical decision support (CDS) tools that assess patient health data to help inform providers as they diagnose disease.', 'source': 'duckduckgo'}, {'title': '(PDF) Data Privacy and Security Concerns in AI-Driven Healthcare', 'url': 'https://www.researchgate.net/publication/394275058_Data_Privacy_and_Security_Concerns_in_AI-Driven_Healthcare', 'snippet': 'This paper critically explores the multifaceted issues surrounding data privacy and security in AI-driven healthcare, identifying key risks, legal challenges, and emerging solutions.', 'source': 'duckduckgo'}, {'title': 'AI in Healthcare: Security and Privacy Concerns - lepide.com', 'url': 'https://www.lepide.com/blog/ai-in-healthcare-security-and-privacy-concerns/', 'snippet': 'AI is transforming healthcare, but at what cost? Explore the security and privacy risks of AI-driven healthcare and how to safeguard patient data.', 'source': 'duckduckgo'}, {'title': 'Medical Data Privacy and Security in the AI Age - Springer', 'url': 'https://link.springer.com/chapter/10.1007/978-3-031-94690-5_14', 'snippet': 'This chapter examines challenges to medical data privacy and security in the age of artificial intelligence (AI). It analyzes how AI intensifies concerns about health record privacy and security and evaluates key elements of federal legal oversight, including the...', 'source': 'duckduckgo'}, {'title': 'Data Privacy in the Age of AI: Who protects our Health Data?', 'url': 'https://data2evidence.org/knowledge/data-privacy-in-the-age-of-ai/', 'snippet': 'To achieve this, policymakers, healthcare providers, and technology companies must collaborate on stronger laws, transparent practices, and privacy-preserving AI solutions. Protecting healthcare data in the AI era requires a multi-layered strategy: AI privacy policies must be updated to address data flows, model training, and user consent.', 'source': 'duckduckgo'}]
-For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_GRAPH_NODE_RETURN_VALUE
-During task with name 'research' and id '05f4c6eb-b7fe-eaef-b5f4-108cc71b60c3'
-
-2026-04-16 13:44:55.786 | ERROR    | __main__:<module>:198 - {'event': 'agent_execution_failed', 'error': '2 validation errors for SystemMessage\ncontent.str\n  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x000001226870CA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\ncontent.list[union[str,dict[any,any]]]\n  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x000001226870CA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type'}
-2026-04-16 13:44:55.795 | ERROR    | __main__:<module>:202 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 190, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
-    )
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 134, in research_node
-    SystemMessage ( research_nod_system_prompt),
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\system.py", line 60, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\base.py", line 179, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\load\serializable.py", line 118, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
     validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 2 validation errors for SystemMessage
-content.str
-  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x000001226870CA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/string_type
-content.list[union[str,dict[any,any]]]
-  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x000001226870CA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/list_type
-During task with name 'research' and id '5bfafaf2-3fdf-e0df-04e9-774f0a3693e7'
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
 
-2026-04-16 13:47:31.667 | ERROR    | __main__:<module>:198 - {'event': 'agent_execution_failed', 'error': '2 validation errors for SystemMessage\ncontent.str\n  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x000001B349C9CA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\ncontent.list[union[str,dict[any,any]]]\n  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x000001B349C9CA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type'}
-2026-04-16 13:47:31.673 | ERROR    | __main__:<module>:202 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 190, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
+2026-05-01 15:16:11.537 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.538 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:16:11.538 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.539 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:16:11.540 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.540 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:16:11.541 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.541 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:16:11.542 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:16:11.542 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.768 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.792 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.793 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.794 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.795 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.796 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.796 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.797 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.797 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.798 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.799 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.799 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-01 15:49:05.799 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:105 - {'event': 'duckduckgo_search_failed', 'error': 'Could not import ddgs python package. Please install it with `pip install -U ddgs`.'}
+2026-05-01 15:49:05.800 | ERROR    | app.services.web_search.search_tools:_duckduckgo_search:106 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 49, in validate_environment
+    from ddgs import DDGS  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'ddgs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\services\web_search\search_tools.py", line 75, in _duckduckgo_search
+    wrapper = DuckDuckGoSearchAPIWrapper(max_results=max_results)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_community\utilities\duckduckgo_search.py", line 51, in validate_environment
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: Could not import ddgs python package. Please install it with `pip install -U ddgs`.
+
+2026-05-02 14:20:29.591 | ERROR    | __main__:research_node:168 - {'event': 'research_error', 'error': 'Server disconnected without sending a response.'}
+2026-05-02 14:20:29.628 | ERROR    | __main__:research_node:169 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\agents\research_agent.py", line 154, in research_node
+    pack = extractor.invoke(
+        [
+    ...<2 lines>...
+        ]
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3155, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5695, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 2559, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 455, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1198, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1005, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1310, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3071, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        **request,
+        ^^^^^^^^^^
+    )
+    ^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\models.py", line 6329, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\models.py", line 4767, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1579, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1370, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1348, in _request_once
+    response = self._httpx_client.send(httpx_request, stream=stream)  # type: ignore[union-attr]
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+2026-05-02 14:20:29.628 | ERROR    | __main__:<module>:389 - {'event': 'execution_failed', 'error': 'Server disconnected without sending a response.'}
+2026-05-02 14:20:29.636 | ERROR    | __main__:<module>:390 - Traceback (most recent call last):
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpcore\_sync\http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\research_agent_backend\app\agents\research_agent.py", line 380, in <module>
+    result = research_agent.invoke(
+        {"topic": "claud co-workers"}
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3365, in invoke
     for chunk in self.stream(
                  ~~~~~~~~~~~^
         input,
@@ -341,7 +440,7 @@ During task with name 'research' and id '5bfafaf2-3fdf-e0df-04e9-774f0a3693e7'
         ^^^^^^^^^
     ):
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2759, in stream
     for _ in runner.tick(
              ~~~~~~~~~~~^
         [t for t in loop.tasks.values() if not t.writes],
@@ -351,7 +450,7 @@ During task with name 'research' and id '5bfafaf2-3fdf-e0df-04e9-774f0a3693e7'
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     ):
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
     run_with_retry(
     ~~~~~~~~~~~~~~^
         t,
@@ -361,168 +460,121 @@ During task with name 'research' and id '5bfafaf2-3fdf-e0df-04e9-774f0a3693e7'
         ^^
     )
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
     return task.proc.invoke(task.input, config)
            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
     input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
     ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 134, in research_node
-    SystemMessage ( content=research_nod_system_prompt),
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\system.py", line 60, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\base.py", line 179, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\load\serializable.py", line 118, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
-    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 2 validation errors for SystemMessage
-content.str
-  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x000001B349C9CA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/string_type
-content.list[union[str,dict[any,any]]]
-  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x000001B349C9CA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/list_type
-During task with name 'research' and id 'c723149c-555d-7911-f7ae-54187f7aab4c'
-
-2026-04-16 13:48:02.675 | ERROR    | __main__:<module>:198 - {'event': 'agent_execution_failed', 'error': '2 validation errors for SystemMessage\ncontent.str\n  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x00000244A42FCA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\ncontent.list[union[str,dict[any,any]]]\n  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x00000244A42FCA40>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type'}
-2026-04-16 13:48:02.682 | ERROR    | __main__:<module>:202 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 190, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
+  File "D:\research_agent_backend\app\agents\research_agent.py", line 154, in research_node
+    pack = extractor.invoke(
+        [
+    ...<2 lines>...
+        ]
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3155, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5695, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
         input,
         ^^^^^^
-    ...<10 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     )
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 134, in research_node
-    SystemMessage ( content=research_nod_system_prompt),
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\system.py", line 60, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\base.py", line 179, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\load\serializable.py", line 118, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
-    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 2 validation errors for SystemMessage
-content.str
-  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x00000244A42FCA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/string_type
-content.list[union[str,dict[any,any]]]
-  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x00000244A42FCA40>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/list_type
-During task with name 'research' and id '86b0507e-905d-3e62-132b-d6d68b2e011d'
-
-2026-04-16 13:49:14.860 | ERROR    | __main__:<module>:198 - {'event': 'agent_execution_failed', 'error': '2 validation errors for SystemMessage\ncontent.str\n  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x00000196502FC9A0>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\ncontent.list[union[str,dict[any,any]]]\n  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x00000196502FC9A0>, input_type=function]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type'}
-2026-04-16 13:49:14.867 | ERROR    | __main__:<module>:202 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 190, in <module>
-    result = research_agent.invoke({"topic": topic})
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3309, in invoke
-    for chunk in self.stream(
-                 ~~~~~~~~~~~^
-        input,
-        ^^^^^^
-    ...<10 lines>...
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 2559, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 455, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
         **kwargs,
         ^^^^^^^^^
-    ):
+    ).generations[0][0],
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2736, in stream
-    for _ in runner.tick(
-             ~~~~~~~~~~~^
-        [t for t in loop.tasks.values() if not t.writes],
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1198, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1005, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
     ...<2 lines>...
-        schedule_task=loop.accept_push,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
-    run_with_retry(
-    ~~~~~~~~~~~~~~^
-        t,
-        ^^
-    ...<10 lines>...
-        },
-        ^^
+        **kwargs,
+        ^^^^^^^^^
     )
     ^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 126, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
-    ret = self.func(*args, **kwargs)
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 134, in research_node
-    SystemMessage ( content=research_nod_system_prompt),
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\system.py", line 60, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\messages\base.py", line 179, in __init__
-    super().__init__(content=content, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\langchain_core\load\serializable.py", line 118, in __init__
-    super().__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
-    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 2 validation errors for SystemMessage
-content.str
-  Input should be a valid string [type=string_type, input_value=<function research_nod_sy...t at 0x00000196502FC9A0>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/string_type
-content.list[union[str,dict[any,any]]]
-  Input should be a valid list [type=list_type, input_value=<function research_nod_sy...t at 0x00000196502FC9A0>, input_type=function]
-    For further information visit https://errors.pydantic.dev/2.13/v/list_type
-During task with name 'research' and id '84420deb-9641-cbd1-bc6d-6acae1889fc3'
-
-2026-04-16 14:38:24.599 | ERROR    | __main__:research_node:202 - {'event': 'research_node_failed', 'topic': 'AI in data science jobs', 'error': "name 'research_node_system_prompt' is not defined", 'duration_sec': 13.9}
-2026-04-16 14:38:24.600 | ERROR    | __main__:research_node:209 - Traceback (most recent call last):
-  File "C:\Users\sachi\OneDrive\Desktop\research_agent_backend\app\agents\research_agent.py", line 183, in research_node
-    SystemMessage(content=research_node_system_prompt()),
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-NameError: name 'research_node_system_prompt' is not defined. Did you mean: 'research_nod_system_prompt'?
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1310, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 3071, in _generate
+    response: GenerateContentResponse = self.client.models.generate_content(
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        **request,
+        ^^^^^^^^^^
+    )
+    ^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\models.py", line 6329, in generate_content
+    response = self._generate_content(
+        model=model, contents=contents, config=parsed_config
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\models.py", line 4767, in _generate_content
+    response = self._api_client.request(
+        'post', path, request_dict, http_options
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1579, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1370, in _request
+    return retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "D:\research_agent_backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1348, in _request_once
+    response = self._httpx_client.send(httpx_request, stream=stream)  # type: ignore[union-attr]
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sachin.kn\AppData\Local\Programs\Python\Python314\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "D:\research_agent_backend\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+During task with name 'research' and id '5a6e611e-5e6f-2bd9-5a5f-288b43dc7ab9'
 
